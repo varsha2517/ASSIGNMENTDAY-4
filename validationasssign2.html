@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Password Validation</title>
+        <script>
+            function passValidate(){
+                var valpass = docuement.getElementById('txtPassword').value;
+                if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$]).{5,12}$/.test(valpass)){
+                    document.getElementById('lblError').innerHTML = "valid password";
+                }
+                else{
+                    document.getElementById('lblError').innerHTML = "Invalid password";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="Password" id="txtPassword" />
+        <br />
+        <span id="lblError"></span>
+        <button type="button" onclick="passValidate()">PasswordValidation</button>
+    </body>
+</html>
